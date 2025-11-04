@@ -1,0 +1,188 @@
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #1d2129;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f5f6f7;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input[type=text],
+input[type=number],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Important */
+}
+
+/* Button and Link Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-right: 8px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn-add {
+    background-color: #28a745; /* Green */
+}
+
+.btn-edit {
+    background-color: #007bff; /* Blue */
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Red */
+}
+
+.btn-save {
+    background-color: #007bff; /* Blue */
+    border: 0;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+.btn-back {
+    background-color: #6c757d; /* Gray */
+}
+
+.actions a {
+    margin-right: 8px;
+    text-decoration: none;
+}
+
+#main-menu li {
+    margin-bottom: 15px;
+}
+
+.actions a:hover {
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Styling for the submenu (Facultades dropdown) */
+#main-menu li {
+    position: relative; /* Needed for submenu positioning */
+}
+
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: #ffffff; /* White background for dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    min-width: 200px;
+    z-index: 1000; /* Ensure it appears above other content */
+    display: none; /* Hidden by default */
+    top: 100%; /* Position below the parent link */
+    left: 0;
+}
+
+#main-menu li:hover > .submenu {
+    display: block; /* Show on hover */
+}
+
+.submenu li {
+    margin: 0;
+    border-bottom: 1px solid #eee; /* Separator between items */
+}
+
+.submenu li:last-child {
+    border-bottom: none; /* No separator for the last item */
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #007bff; /* Blue text, similar to btn-edit */
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 0; /* Remove border-radius for individual items */
+}
+
+.submenu li a:hover {
+    background-color: #e9ecef; /* Light gray background on hover */
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Adjust main menu item for dropdown parent */
+#main-menu li a.btn-edit[href="#"] {
+    margin-bottom: 0; /* Remove extra margin if it's a parent of a dropdown */
+}
